@@ -1,0 +1,4 @@
+name = DCManila2016
+description = Sample module for DrupalCamp Manila 2106
+core = 7.x
+package = Other
