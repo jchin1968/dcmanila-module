@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_menu
+ */
+function dcmanila2016_menu() {
+  $items['greetings/%'] = array(
+    'page callback' => 'dcmanila2016_hello',
+    'access callback' => 'dcmanila2016_access',
+    'page arguments' => array(1),
+  );
+  return $items;
+}
+
+/**
+ * Dead simple example
+ */
+function dcmanila2016_hello($name = "World") {
+  $message = t('Hello %name', array('%name' => $name));
+  return $message;
+}
+
+function dcmanila2016_access() {
+  return TRUE;
+}
